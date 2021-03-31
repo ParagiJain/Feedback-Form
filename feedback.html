@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="E:\web development 3\feedback style.css">
+        <title>
+            FEEDBACK FORM
+        </title>
+        <script>
+            function Clear() {
+                document.getElementById("fname").value = "";
+                document.getElementById("mname").value = "";
+                document.getElementById("lname").value = "";
+                document.querySelector('input[name="gender"]:checked').checked = false;
+                document.getElementById("suggestion").value = "";
+            }
+            function input() {
+                debugger;
+               // alert("Hello!");
+                var fname = document.getElementById("fname").value;
+                var midmame = document.getElementById("mname").value;
+                var lastname = document.getElementById("lname").value;
+               var Gender = document.querySelector('input[name="gender"]:checked').value;
+                var feedback = document.getElementById("mytest").value;
+                var suggestion = document.getElementById("suggestion").value;
+                var d = new Date();
+                //alert(fname.length);
+                if (fname == "" ) {
+                    alert("Enter first name. ");
+                }
+                else if (lastname == "")
+                {
+                    alert("Enter last name. ");
+                }
+                else if (fname.length > 40 || midmame.length > 40 || lastname.length > 40)
+                {
+                    alert("Name doesnot exceed 40 characters");
+                }
+                else{
+                    if (midmame.trim() == "")
+                        name = Gender + " " + fname.trim() + " " + lastname.trim();
+                    else {
+                        name = Gender + " " + fname.trim() + " " + midmame.trim() + " " + lastname.trim()
+                        }
+                } 
+                feedback += "\n" + "Name: " + name + "\n" + "Suggestion: " + suggestion + "\n" + d + "\n";
+                document.getElementById("mytest").value = feedback;
+            }
+        </script>
+    </head>
+    <body id="body">
+        <div id="header">
+            <h1><pre> FEEDBACK                                                              Your Thoughts Matter</pre>
+            <ul>
+                <li style="float: right;"><a href="subjects.html">subjects</a></li>
+                <li style="float: right;"><a href="contact.html">Contact</a></li>
+                <li style="float: right;"><a class="active" href="about me.html">HOME</a></li>
+               
+              </ul>
+          </h1>
+          </div><br><br><br><br><br><br><br><br><br>
+          <section id="sec1">
+            <form method="POST">
+                <label for="fname">First name:</label>&nbsp &nbsp &nbsp;
+                <input id="fname" type="text" id="fname" name="fname" placeholder="Enter first name only "><br><br>
+                <label for="lname">Middle name: </label>
+                <input id="mname" type="text" id="mname" name="lmname" placeholder="Enter middle name only "><br><br>
+                <label for="lname">Last name:   </label>&nbsp &nbsp;
+                <input id="lname" type="text" id="lname" name="lname" placeholder="Enter last name only "><br><br>
+                <input class="gender" type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input class="gender" type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <label for="suggestion">Suggestions:  </label><br>
+                <textarea id="suggestion" name="suggestion" rows="10" cols="30" placeholder="Enter your suggestions here..."></textarea><br><br>
+                <button type="button" onclick="input()">+</button>
+                <button type="button" onclick="clear()">-</button>
+                
+           </form> 
+          </section>
+          <section id="sec2">
+         </section>
+    </body>    
+</html>    

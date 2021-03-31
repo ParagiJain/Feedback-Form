@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body class="body">
+
+    <div class="header">
+        <h1><pre> FEEDBACK                                                   Your Thoughts Matter</pre>
+        <ul>
+          <li style="float: right;"><a class="active" href="favourite books.html">books</a></li>
+          <li style="float: right;"><a href="contact.html">Contact</a></li>
+          <li style="float: right;"><a href="about me.html">About</a></li>
+          <li style="float: right;"><a class="active" href="index.html">Home</a></li>
+        </ul></h1>
+        
+      </div><br>
+    <h1>FEEDBACK FORM</h1>
+
+    <section class="section">
+        <nav class="nav">
+            <form action="" class="form">
+                <label><b>FIRST NAME* </b> <input type="text" id="fname"></label> <br><br>
+                <label> <b>MIDDLE NAME </b><input type="text" id="midname" placeholder="(Optional)"></label> <br><br>
+                <label><b>LAST NAME* </b> <input type="text" id="lastname"></label><br><br>
+                <label><b> SUGGESTIONS </b> <textarea rows="6" cols="20" name="feedback" id="t5" placeholder="Enter your feedback here...."></textarea></label><br><br>
+                <label><b>GENDER </b><input type="radio" name="sex" value="Mr." id="male" checked=""><b>M</b>
+                <input type="radio" name="sex" value="Ms." id="female"><b>F</b>
+                </label><br><br>
+                <label>
+                    <input type="submit" value="+" onclick="input(); return false">
+                    <input type="submit" value="-" onclick="clear()">
+                </label>
+            </form>
+        </nav>
+        <article class="feed">
+            <textarea cols="40" rows="18" id="mytest" maxlength="0"></textarea>
+        </article>
+    </section>
+    <script src="1st.js"></script>
+</body>
+</html>
